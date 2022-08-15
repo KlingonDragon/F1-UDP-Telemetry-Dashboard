@@ -1,0 +1,4 @@
+uint8	B	int8	b
+uint16	H	int16	h
+uint32	I	float	f
+uint64	Q
