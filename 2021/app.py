@@ -14,7 +14,7 @@ compass = {
 }
 hex = colour.hex().from_string
 def img(filename):
-    return '{}/img/{}'.format(os.path.dirname(os.path.abspath(__file__)),filename)
+    return '{}/../img/{}'.format(os.path.dirname(os.path.abspath(__file__)),filename)
 def new_frame(master, row, column, rowconfigure=[], columnconfigure=[], rowspan=1, columnspan=1, border=0, padding=None):
     frame = tk.Frame(master, padx=(padding if padding else border), pady=(padding if padding else border), borderwidth=border, relief='groove')
     try:
