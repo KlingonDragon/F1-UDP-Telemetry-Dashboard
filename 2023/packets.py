@@ -104,7 +104,6 @@ class PacketData():
                 self.num_virtual_safety_car_periods,
                 self.num_red_flag_periods
             ] = unpack('<BBIIIBBBBBBBBBBBBBBIBBBBBBBB', bytes[start:start+40])
-            print('[{} - {}]  [{} - {}]'.format(self.num_marshal_zones, len(self.marshal_zones), self.num_weather_forcast_samples, len(self.weather_forcast_samples)))
             
         class MarshalZone():
             def __init__(self, x, bytes):
