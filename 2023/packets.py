@@ -5,6 +5,8 @@ class PacketData():
         match self.header.packet_id:
             case 1:
                 self.body = self.PacketSessionData(bytes[29:])
+            case 2:
+                self.body = self.PacketLapData(bytes[29:])
             case 3:
                 pass
             case 4:
@@ -127,3 +129,9 @@ class PacketData():
                     self.air_temperature_change,
                     self.rain_percentage
                 ] = unpack('<BBBbbbbB', bytes)
+    class PacketLapData():
+        def __init__(self, bytes):
+            [] = unpack('<', bytes)
+        class LapData():
+            def __init__(self, bytes):
+                [] = unpack('<', bytes)
